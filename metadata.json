@@ -1,0 +1,6 @@
+{
+  "name": "BIO FÁCIL — Editor de Biosites",
+  "description": "Editor visual local para biosites e páginas de links. Edite textos, fotos, links e produtos sem mexer em código e exporte pronto para hospedar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
