@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AlertCircle, CheckCircle2, ArrowRight } from 'lucide-react';
-import { SAMPLE_TEMPLATE_HTML } from '../utils/sampleTemplate';
 
 interface HomeImportProps {
   onAnalyzeHtml: (html: string) => void;
@@ -28,11 +27,6 @@ export const HomeImport: React.FC<HomeImportProps> = ({
     }
     setErrorMsg(null);
     onAnalyzeHtml(htmlInput);
-  };
-
-  const handleLoadSample = () => {
-    setHtmlInput(SAMPLE_TEMPLATE_HTML);
-    setErrorMsg(null);
   };
 
   return (
@@ -120,16 +114,8 @@ export const HomeImport: React.FC<HomeImportProps> = ({
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#050505]" />
             </button>
 
-            <div className="flex items-center justify-between w-full pt-1 px-1">
-              <button
-                type="button"
-                onClick={handleLoadSample}
-                className="text-xs text-[#8D9891] hover:text-[#35F58A] underline underline-offset-4 transition-colors cursor-pointer"
-              >
-                Testar com modelo de exemplo
-              </button>
-
-              {htmlInput && (
+            {htmlInput && (
+              <div className="flex items-center justify-end w-full pt-1 px-1">
                 <button
                   type="button"
                   onClick={handleClear}
@@ -137,8 +123,8 @@ export const HomeImport: React.FC<HomeImportProps> = ({
                 >
                   Limpar
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
 
